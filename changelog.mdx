@@ -1,0 +1,128 @@
+---
+title: Changelog
+description: Track the latest updates and improvements to SHR Creative Studio.
+---
+
+## Overview
+
+SHR Creative Studio continuously evolves with new features, performance improvements, and bug fixes. You can find detailed release notes below, organized by version. Each release includes semantic versioning to help you understand the impact of updates.
+
+<Callout kind="info">
+  Subscribe to our RSS feed or follow us on GitHub to get notifications for new releases.
+</Callout>
+
+## Recent Releases
+
+<Update label="2024-10-15" description="v2.3.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added real-time collaboration for teams, allowing multiple users to edit documents simultaneously.
+- Introduced AI-powered content suggestions to help you generate documentation faster.
+- New template library with 10+ pre-built documentation starters.
+
+## Improvements
+
+- Enhanced search functionality with fuzzy matching and syntax highlighting.
+- Optimized rendering performance for large documentation sites by `>30%`.
+
+## Bug Fixes
+
+- Fixed issue where embedded images failed to load in preview mode.
+- Resolved keyboard navigation bugs in the sidebar menu.
+
+</Update>
+
+<Update label="2024-09-20" description="v2.2.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Integrated version control with GitHub sync for seamless workflow.
+- Added custom theme builder using your brand color `#3B82F6`.
+
+## Bug Fixes
+
+- Corrected export to PDF errors on pages with complex tables.
+- Fixed dark mode toggle persistence across sessions.
+
+</Update>
+
+<Update label="2024-08-10" description="v2.1.0" tags={["breaking", "feature"]}>
+
+## Breaking Changes
+
+- Updated configuration format from YAML to JSON. Migrate your `config.yaml` files using the provided script.
+
+## New Features
+
+- Live preview for MDX components with hot reloading.
+- Support for custom JSX components in documentation pages.
+
+## Improvements
+
+- Redesigned editor interface for better mobile responsiveness.
+
+</Update>
+
+## Upgrade Instructions
+
+Follow these steps to update SHR Creative Studio to the latest version.
+
+<Steps>
+  <Step title="Backup Your Project" icon="database">
+
+  Create a backup of your current project directory.
+
+  ```
+  cp -r your-project ~/backup-$(date +%Y%m%d)
+  ```
+
+  </Step>
+  <Step title="Update Package" icon="package">
+    <Tabs>
+      <Tab title="npm" icon="npm">
+````bash
+npm install shr-creative-studio@latest
+````
+      </Tab>
+      <Tab title="yarn" icon="yarn">
+````bash
+yarn add shr-creative-studio@latest
+````
+      </Tab>
+    </Tabs>
+  </Step>
+  <Step title="Run Migration" icon="settings">
+    <CodeGroup tabs="CLI,Script">
+````bash
+npx shr-migrate config.yaml
+````
+````javascript
+// migration.js
+const { migrateConfig } = require('shr-creative-studio/migrate');
+migrateConfig('config.yaml', 'config.json');
+````
+    </CodeGroup>
+  </Step>
+  <Step title="Restart Server" icon="refresh-cw">
+    Restart your development server and verify changes.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  After upgrading, check the [Quickstart](/quickstart) guide for any new configuration options.
+</Callout>
+
+## Quick Links
+
+<Columns cols={3}>
+  <Card title="GitHub Releases" icon="github" href="https://github.com/shr-creative-studio/releases" target="_blank">
+    View all releases and download assets.
+  </Card>
+  <Card title="Migration Guide" icon="book-open" href="/migration">
+    Detailed steps for breaking changes.
+  </Card>
+  <Card title="Report Issues" icon="bug" href="https://github.com/shr-creative-studio/issues" target="_blank">
+    Found a bug? Help us improve.
+  </Card>
+</Columns>

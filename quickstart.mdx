@@ -1,0 +1,116 @@
+---
+title: Getting Started with SHR Creative Studio
+description: Set up your account and create your first documentation project in minutes.
+---
+
+## Prerequisites
+
+<Callout kind="info">
+Before starting, ensure you have:
+- A modern web browser (Chrome, Firefox, Safari, or Edge)
+- An email address for account verification
+- Optional: A GitHub account for version control integration
+</Callout>
+
+## Create Your Account
+
+Sign up for SHR Creative Studio in under 2 minutes. Follow these steps to get started.
+
+<Steps>
+  <Step title="Visit the Dashboard" icon="monitor">
+    Navigate to `https://app.shrcreative.studio` and click **Sign Up**.
+  </Step>
+  <Step title="Enter Your Details" icon="user">
+    Provide your email, create a strong password, and complete the CAPTCHA.
+  </Step>
+  <Step title="Verify Email" icon="mail">
+    Check your inbox for a verification email from SHR Creative Studio and click the link.
+  </Step>
+  <Step title="Complete Onboarding" icon="check-circle">
+    Answer a few quick questions about your project needs to personalize your dashboard.
+  </Step>
+</Steps>
+
+## Initial Setup and First Space
+
+Once logged in, configure your workspace and create your first documentation space.
+
+<Steps>
+  <Step title="Configure Profile" icon="settings">
+    Go to **Account Settings** in the sidebar. Set your team name and timezone.
+  </Step>
+  <Step title="Create First Space" icon="plus">
+    Click **New Space** on the dashboard. Name it `My Project Docs` and select **Documentation** template.
+  </Step>
+  <Step title="Add First Page" icon="file-text">
+    Inside your space, create a page titled **Introduction**. Add markdown content like `# Welcome to My Docs`.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+Spaces organize your documentation projects. Each space supports unlimited pages, custom domains, and integrations.
+</Callout>
+
+## Basic Interface Tour
+
+Explore the SHR Creative Studio interface through these key sections.
+
+<Tabs>
+  <Tab title="Sidebar Navigation" icon="menu">
+    The left sidebar provides quick access to:
+    - **Spaces**: Switch between projects
+    - **Pages**: Browse and search content
+    - **Settings**: Manage users and integrations
+  </Tab>
+  <Tab title="Editor Toolbar" icon="edit-3">
+    Use the top toolbar for:
+    - Rich text formatting
+    - MDX component insertion (like `<Callout>`)
+    - Preview and publish toggles
+  </Tab>
+  <Tab title="Preview Panel" icon="eye">
+    Real-time preview shows how your docs render. Toggle between desktop and mobile views.
+  </Tab>
+</Tabs>
+
+## Integrate with GitHub (Optional)
+
+Connect your space to GitHub for version control.
+
+<CodeGroup tabs="CLI,Web UI">
+  ````bash
+  # Install SHR CLI
+  npm install -g shr-cli
+
+  # Authenticate
+  shr login --email your-email@domain.com
+
+  # Link your space
+  shr space link my-project-docs --repo owner/repo
+  ````
+  ```bash
+  # In dashboard: Settings > Integrations > GitHub
+  # Click "Connect Repository"
+  # Select owner/repo and branch (main)
+  ```
+</CodeGroup>
+
+## Next Steps
+
+<Columns cols={3}>
+  <Card title="Authentication" icon="lock" href="/authentication">
+    Secure your spaces with API keys and SSO.
+  </Card>
+  <Card title="Advanced Features" icon="sparkles" href="/configuration">
+    Customize themes, webhooks, and analytics.
+  </Card>
+  <Card title="Changelog" icon="git-branch" href="/changelog">
+    Stay updated with the latest releases.
+  </Card>
+</Columns>
+
+<Expandable title="Troubleshooting Common Issues" default-open="false">
+- **Email not received?** Check spam folder or resend from login page.
+- **Space creation fails?** Ensure your account is verified.
+- **Editor lag?** Clear browser cache or switch to incognito mode.
+</Expandable>
